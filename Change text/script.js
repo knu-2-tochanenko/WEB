@@ -1,4 +1,23 @@
 //  Function to change text in <p> tag
 function changeName() {
-    document.getElementById("text-item").innerHTML = "Hello World!";
+    document.getElementById("text-item").innerHTML = 'Hello World!';
+}
+
+//  Enlarge text
+function enlargeText() {
+    var textElement = document.getElementById("text-size");
+    var style = window.getComputedStyle(textElement, null).getPropertyValue('font-size');
+    textElement.style.fontSize = ((parseFloat(style) + 1) + 'px');
+}
+
+//  Not enlarge text
+function notEnlargeText() {
+    var textElement = document.getElementById("text-size");
+    var style = window.getComputedStyle(textElement, null).getPropertyValue('font-size');
+    var newSize = parseFloat(style);
+    if (newSize <= 1) {
+        newSize = 1 + 'px';
+        alert('font-size is too small!');
+    }
+    textElement.style.fontSize = ((newSize - 1) + 'px');
 }
