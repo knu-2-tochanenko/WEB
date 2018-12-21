@@ -21,3 +21,11 @@ function notEnlargeText() {
     }
     textElement.style.fontSize = ((newSize - 1) + 'px');
 }
+
+function writeArray() {
+    var str = "";
+    for(var i = 0; i < 100; i++) {
+        str += i + '<br>';
+    }
+    document.getElementById("write-here").innerHTML = str;
+}
