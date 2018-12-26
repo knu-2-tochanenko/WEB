@@ -1,3 +1,11 @@
+function loadPage() {
+    document.getElementById("string-type").innerHTML = typeof("Hello");
+    document.getElementById("number-type").innerHTML = typeof(65536);
+}
+
+//  Load page context after loading page
+window.onload = loadPage;
+
 //  Function to change text in <p> tag
 function changeName() {
     document.getElementById("text-item").innerHTML = 'Hello World!';
