@@ -17,7 +17,7 @@ function notEnlargeText() {
     var newSize = parseFloat(style);
     if (newSize <= 1) {
         newSize = 1 + 'px';
-        alert('font-size is too small!');
+        window.alert('font-size is too small!');
     }
     textElement.style.fontSize = ((newSize - 1) + 'px');
 }
@@ -57,7 +57,8 @@ function calculate() {
         break;
     case "/":
         if (secondNumber == 0) {
-            alert("Can't divide by zero!");
+            window.alert("Can't divide by zero!");
+            console.log("Something went wrong in '/' method");
             res = "Try again";
         }
         else
@@ -70,7 +71,8 @@ function calculate() {
         break;
     case "%":
         if (secondNumber == 0) {
-            alert("Can't divide by zero!");
+            window.alert("Can't divide by zero!");
+            console.log("Something went wrong in '%' method");
             res = "Try again";
         }
         else
