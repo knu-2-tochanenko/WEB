@@ -1,5 +1,35 @@
-body {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+@font-face {
+    font-family: 'Google Sans';
+    src: url(../fonts/Google-Sans/GoogleSans-Regular.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: 'Google Sans';
+    font-weight: bold;
+    src: url(../fonts/Google-Sans/GoogleSans-Bold.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: 'Google Sans';
+    font-style: italic;
+    src: url(../fonts/Google-Sans/GoogleSans-Italic.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: 'Google Sans';
+    font-weight: bold;
+    font-style: italic;
+    src: url(../fonts/Google-Sans/GoogleSans-BoldItalic.ttf) format("truetype");
+}
+
+body, input, select, option {
+    font-family: 'Google Sans', Calibri;
+}
+
+button {
+    font-family: 'Google Sans', Calibri;
+    text-transform: uppercase;
+    font-weight: bold;
 }
 
 #text-size {
