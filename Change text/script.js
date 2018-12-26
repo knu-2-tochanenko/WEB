@@ -38,3 +38,9 @@ function hideName() {
 function showName() {
     document.getElementById("text-item").style.display = "block"
 }
+
+function calculateSum() {
+    var firstNumber = parseInt(document.getElementById("first-number").value);
+    var secondNumber = parseInt(document.getElementById("second-number").value);
+    document.getElementById("res").innerHTML = firstNumber + secondNumber;
+}
