@@ -56,11 +56,28 @@ function calculate() {
         res = firstNumber * secondNumber;
         break;
     case "/":
-        if (secondNumber == 0)
+        if (secondNumber == 0) {
             alert("Can't divide by zero!");
+            res = "Try again";
+        }
         else
             res = firstNumber / secondNumber;
         break;
+    case "!":
+        res = 1;
+        for (i = 2; i <= firstNumber; i++)
+            res *= i;
+        break;
+    case "%":
+        if (secondNumber == 0) {
+            alert("Can't divide by zero!");
+            res = "Try again";
+        }
+        else
+            res = firstNumber % secondNumber;
+        break;
+    default:
+        res = "Try again";
     }
     document.getElementById("res").innerHTML = res;
 }
