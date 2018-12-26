@@ -39,8 +39,28 @@ function showName() {
     document.getElementById("text-item").style.display = "block"
 }
 
-function calculateSum() {
+function calculate() {
     var firstNumber = parseInt(document.getElementById("first-number").value);
     var secondNumber = parseInt(document.getElementById("second-number").value);
-    document.getElementById("res").innerHTML = firstNumber + secondNumber;
+    var dropDown = document.getElementById("operation");
+    var selectedValue = dropDown[dropDown.selectedIndex].text;
+    var res;
+    switch (selectedValue) {
+    case "+":
+        res = firstNumber + secondNumber;
+        break;
+    case "-":
+        res = firstNumber - secondNumber;
+        break;
+    case "*":
+        res = firstNumber * secondNumber;
+        break;
+    case "/":
+        if (secondNumber == 0)
+            alert("Can't divide by zero!");
+        else
+            res = firstNumber / secondNumber;
+        break;
+    }
+    document.getElementById("res").innerHTML = res;
 }

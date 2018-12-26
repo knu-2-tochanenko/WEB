@@ -19,14 +19,16 @@
         <p id="write-here"></p>
 
         <hr>
-
-        First number:
-        <input id="first-number" type="number"><br><br>
-        
-        Second number:
-        <input id="second-number" type="number"><br>
+        <input id="first-number" class="number-input" type="number">
+        <select id="operation" class="number-input" name="operation">
+            <option value="add">+</option>
+            <option value="substr">-</option>
+            <option value="mult">*</option>
+            <option value="div">/</option>
+        </select>
+        <input id="second-number" class="number-input" type="number"><br>
         <p id="res">Result</p>
 
-        <button type="button" onclick="calculateSum()">Calculate Sum</button>
+        <button type="button" onclick="calculate()">Calculate</button>
     </body>
 </html>
