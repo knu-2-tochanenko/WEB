@@ -59,6 +59,7 @@ button {
 #center-block {
     width: 50%;
     min-width: 512px;
+    max-width: 810px;
     margin: auto;
     padding: 16px;
     background: #fff;
