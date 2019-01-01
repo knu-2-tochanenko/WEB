@@ -51,8 +51,8 @@ document.getElementById('showHide').onclick = function() {
 }
 
 document.getElementById('calculate').onclick = function() {
-    var firstNumber = parseInt(document.getElementById('first-number').value);
-    var secondNumber = parseInt(document.getElementById('second-number').value);
+    var firstNumber = Number(document.getElementById('first-number').value);
+    var secondNumber = Number(document.getElementById('second-number').value);
     var dropDown = document.getElementById('operation');
     var selectedValue = dropDown[dropDown.selectedIndex].text;
     var res;
@@ -93,4 +93,22 @@ document.getElementById('calculate').onclick = function() {
         res = 'Try again';
     }
     document.getElementById('res').innerHTML = res;
+}
+
+document.getElementById('leftShift').onclick = function () {
+    var number = Number(document.getElementById('number').textContent);
+    var newNumber = number << 1;
+    document.getElementById('number').innerHTML = newNumber;
+}
+
+document.getElementById('rightShift').onclick = function () {
+    var number = Number(document.getElementById('number').textContent);
+    var newNumber = 1;
+    if (number > 1) newNumber = number >> 1;
+    document.getElementById('number').innerHTML = newNumber;
+}
+
+document.getElementById('submitNumber').onclick = function() {
+    var number = Number(document.getElementById('number-to-shift').value);
+    document.getElementById('number').innerHTML = number;
 }
