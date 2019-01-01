@@ -1,53 +1,55 @@
 <!DOCTYPE html>
     <!--        A simple text-changing website        -->
     <head>
-        <script src="script.js"></script>
         <link rel="stylesheet" href="style.css">
         <title>Text playground</title>
     </head>
     <body>
-        <p id="text-item">Well, hello!</p>
-        <button type="button" onclick="changeName()">Type it!</button>
-        <button type="button" onclick="hideName()">Hide</button>
-        <button type="button" onclick="showName()">Show</button>
-        <hr>
-        <p id="text-size">A</p>
-        <button type="button" onclick="enlargeText()">+</button>
-        <button type="button" onclick="notEnlargeText()">-</button> <!-- cherepah -->
-        
+        <div id="center-block">
+            <p id="text-item">Well, hello!</p>
+            <button type="button" id="typeItButton">Type it!</button>
+            <button type="button" id="hideName">Hide</button>
+            <button type="button" id="showName">Show</button>
+            <hr>
+            <p id="text-size">A</p>
+            <button type="button" id="enlargeText">+</button>
+            <button type="button" id="notEnlargeText">-</button> <!-- cherepah -->
+            
 
-        <button type="button" onclick="writeArray()">hehe</button>
-        <p id="write-here"></p>
+            <button type="button" id="writeArray">hehe</button>
+            <p id="write-here"></p>
 
-        <hr>
-        <input id="first-number" class="number-input" type="number">
-        <select id="operation" class="number-input" name="operation">
-            <option value="add">+</option>
-            <option value="substr">-</option>
-            <option value="mult">*</option>
-            <option value="div">/</option>
-            <option value="fact">!</option>
-            <option value="rem">%</option>
-        </select>
-        <input id="second-number" class="number-input" type="number"><br>
-        <p id="res">Result</p>
+            <hr>
+            <input id="first-number" class="number-input" type="number">
+            <select id="operation" class="number-input" name="operation">
+                <option value="add">+</option>
+                <option value="substr">-</option>
+                <option value="mult">*</option>
+                <option value="div">/</option>
+                <option value="fact">!</option>
+                <option value="rem">%</option>
+            </select>
+            <input id="second-number" class="number-input" type="number"><br>
+            <p id="res">Result</p>
 
-        <button type="button" onclick="calculate()">Calculate</button>
-        <hr>
-        <h1>Types</h1>
-        <table>
-            <tr>
-                <th>value</th>
-                <th>type</th>
-            </tr>
-            <tr>
-                <td>"Hello"</td>
-                <td id="string-type"></td>
-            </tr>
-            <tr>
-                <td>65536</td>
-                <td id="number-type"></td>
-            </tr>
-        </table>
+            <button type="button" id="calculate">Calculate</button>
+            <hr>
+            <h1>Types</h1>
+            <table>
+                <tr>
+                    <th>value</th>
+                    <th>type</th>
+                </tr>
+                <tr>
+                    <td>"Hello"</td>
+                    <td id="string-type"></td>
+                </tr>
+                <tr>
+                    <td>65536</td>
+                    <td id="number-type"></td>
+                </tr>
+            </table>
+        </div>
     </body>
+    <script src="script.js"></script>
 </html>

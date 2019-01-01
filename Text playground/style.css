@@ -26,6 +26,10 @@ body, input, select, option {
     font-family: 'Google Sans', Calibri;
 }
 
+body {
+    background: url(https://webfon.top/wp-content/uploads/2017/10/snezhinka.png) left top repeat;
+}
+
 button {
     font-family: 'Google Sans', Calibri;
     text-transform: uppercase;
@@ -34,6 +38,13 @@ button {
 
 #text-size {
     font-size: 16px;
+}
+
+#center-block {
+    width: 50%;
+    margin: auto;
+    padding: 16px;
+    background: #fff;
 }
 
 .number-input {
