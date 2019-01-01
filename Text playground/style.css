@@ -26,6 +26,22 @@ body, input, select, option {
     font-family: 'Google Sans', Calibri;
 }
 
+.invincible-block {
+    opacity: 0;
+    transition-duration: 300ms;
+    -ms-transition-duration: 300ms;
+    -webkit-transition-duration: 300ms;
+    -moz-transition-duration: 300ms; 
+}
+
+.invincible-block.is-visible {
+    opacity: 1;
+    transition-duration: 300ms;
+    -ms-transition-duration: 300ms;
+    -webkit-transition-duration: 300ms;
+    -moz-transition-duration: 300ms; 
+}
+
 body {
     background: url(https://webfon.top/wp-content/uploads/2017/10/snezhinka.png) left top repeat;
 }
@@ -42,6 +58,7 @@ button {
 
 #center-block {
     width: 50%;
+    min-width: 512px;
     margin: auto;
     padding: 16px;
     background: #fff;

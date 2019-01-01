@@ -37,12 +37,17 @@ document.getElementById('writeArray').onclick = function() {
     document.getElementById('write-here').innerHTML = str;
 }
 
-document.getElementById('hideName').onclick = function() {
-    document.getElementById('text-item').style.display = 'none'
-}
+dumbValue = 0;
 
-document.getElementById('showName').onclick = function() {
-    document.getElementById('text-item').style.display = 'block'
+document.getElementById('showHide').onclick = function() {
+    if (dumbValue === 1) {
+        document.getElementById('text-item').classList.add('is-visible');
+        dumbValue = 0;
+    }
+    else {
+        document.getElementById('text-item').classList.remove('is-visible');
+        dumbValue = 1;
+    }
 }
 
 document.getElementById('calculate').onclick = function() {
