@@ -116,13 +116,11 @@ document.getElementById('submitNumber').onclick = function() {
 themeValue = 0;
 
 document.getElementById('themeButton').onclick = function() {
-    if (themeValue === 1) {
-        document.getElementById('centre-block').classList.remove('dark');
+    if (themeValue == 1) {
+        document.getElementById('theme').href = "light.css";
         themeValue = 0;
-    }
-    else {
-        document.getElementById('centre-block').classList.add('dark');
+    } else {
+        document.getElementById('theme').href = "dark.css";
         themeValue = 1;
     }
-    
 }

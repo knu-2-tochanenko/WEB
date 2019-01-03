@@ -42,10 +42,6 @@ body, input, select, option {
     -moz-transition-duration: 300ms; 
 }
 
-body {
-    background: url(https://webfon.top/wp-content/uploads/2017/10/snezhinka.png) left top repeat;
-}
-
 button {
     position: relative;
     font-family: 'Google Sans', Calibri;
@@ -54,9 +50,6 @@ button {
     font-size: 10pt;
     padding: 7px 15px;
     border-radius: 2px;
-    background: #2196F3;
-    color: white;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
     outline: 0;
     border-width: 0px;
     transition: 0.3s;
@@ -66,45 +59,26 @@ button {
 }
 
 button:hover {
-    background: #42A5F5;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
     cursor: pointer;
 }
 
 input, select {
-    background: white;
     padding: 7px 15px;
     border-width: 0;
-    border-bottom: 1px solid #2196F3;
     border-radius: 2px;
-}
-
-input:focus, select:focus {
-    border-bottom: 1px solid #1976D2;
 }
 
 input {
     font-size: 16px;
     margin-right: 5px;
-    background: #FAFAFA;
 }
 
 hr {
-    border: 1px solid #E0E0E0;
     margin: 10px 0px 25px 0px;
 }
 
 #text-size {
     font-size: 16px;
-}
-
-.white-block.dark {
-    background: #212121;
-    color: white;
-    transition: 0.3s;
-    -ms-transition: 0.3s;
-    -webkit-transition: 0.3s;
-    -moz-transition: 0.3s;
 }
 
 .white-block {
@@ -113,9 +87,7 @@ hr {
     max-width: 810px;
     margin: auto;
     padding: 16px;
-    background: #fff;
     border-radius: 2px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
     transition: 0.3s;
     -ms-transition: 0.3s;
     -webkit-transition: 0.3s;

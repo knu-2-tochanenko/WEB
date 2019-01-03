@@ -1,0 +1,62 @@
+body {
+    background: url('https://festival-collection.com/wp-content/uploads/24/Gothic-Christmas-Background-(1).jpg') left top repeat;
+    transition-duration: 300ms;
+    -ms-transition-duration: 300ms;
+    -webkit-transition-duration: 300ms;
+    -moz-transition-duration: 300ms; 
+}
+
+button {
+    background: #2196F3;
+    color: #212121;
+    box-shadow: 0 1px 3px rgba(255,255,255,0.12), 0 1px 2px rgba(255,255,255,0.24);
+    transition-duration: 300ms;
+    -ms-transition-duration: 300ms;
+    -webkit-transition-duration: 300ms;
+    -moz-transition-duration: 300ms; 
+}
+
+button:hover {
+    background: #42A5F5;
+    box-shadow: 0 10px 20px rgba(255,255,255,0.19), 0 6px 6px rgba(255,255,255,0.23);
+    transition-duration: 300ms;
+    -ms-transition-duration: 300ms;
+    -webkit-transition-duration: 300ms;
+    -moz-transition-duration: 300ms; 
+}
+
+input, select {
+    background: #424242;
+    color: white;
+    border-bottom: 1px solid #2196F3;
+    transition-duration: 300ms;
+    -ms-transition-duration: 300ms;
+    -webkit-transition-duration: 300ms;
+    -moz-transition-duration: 300ms; 
+}
+
+input:focus, select:focus {
+    border-bottom: 1px solid #1976D2;
+    transition-duration: 300ms;
+    -ms-transition-duration: 300ms;
+    -webkit-transition-duration: 300ms;
+    -moz-transition-duration: 300ms; 
+}
+
+hr {
+    border: 1px solid #424242;
+    transition-duration: 300ms;
+    -ms-transition-duration: 300ms;
+    -webkit-transition-duration: 300ms;
+    -moz-transition-duration: 300ms; 
+}
+
+.white-block {
+    background: #212121;
+    color: white;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition-duration: 300ms;
+    -ms-transition-duration: 300ms;
+    -webkit-transition-duration: 300ms;
+    -moz-transition-duration: 300ms; 
+}
