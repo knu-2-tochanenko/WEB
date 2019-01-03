@@ -112,3 +112,17 @@ document.getElementById('submitNumber').onclick = function() {
     var number = Number(document.getElementById('number-to-shift').value);
     document.getElementById('number').innerHTML = number;
 }
+
+themeValue = 0;
+
+document.getElementById('themeButton').onclick = function() {
+    if (themeValue === 1) {
+        document.getElementById('centre-block').classList.remove('dark');
+        themeValue = 0;
+    }
+    else {
+        document.getElementById('centre-block').classList.add('dark');
+        themeValue = 1;
+    }
+    
+}
