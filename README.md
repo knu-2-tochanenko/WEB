@@ -1,4 +1,6 @@
-# knu-2nd-web
-Repo for testing / practice / module (exam) tasks for WEB
+# WEB Development
+*Repo for testing / practice / module (exam) tasks for WEB*
 
-*I am bored*
+##### 1. HTML Only
+[Lecture](https://github.com/knu-2nd-tochanenko/WEB/tree/master/1_lecture)\
+[Practice](https://github.com/knu-2nd-tochanenko/WEB/tree/master/1_ractice)
