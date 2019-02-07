@@ -4,3 +4,6 @@
 #### 1. HTML Only
 [Lecture](https://github.com/knu-2nd-tochanenko/WEB/tree/master/1_lecture)\
 [Practice](https://github.com/knu-2nd-tochanenko/WEB/tree/master/1_practice)
+
+#### 2. CSS
+[Practice](https://github.com/knu-2nd-tochanenko/WEB/tree/master/2_practice)
