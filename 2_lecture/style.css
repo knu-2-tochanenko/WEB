@@ -1,0 +1,156 @@
+body {
+    font-family: Calibri;
+    margin: 0;
+    background: #212121;
+    color: #fefefe;
+}
+
+a {
+    text-decoration: none;
+}
+
+.center-a {
+    height: 256px;
+    width: 400px;
+    background: #673AB7;
+    color: #EDE7F6;
+    border: 5px solid #2196F3;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    margin: auto;
+
+    text-align: center;
+
+    line-height: 256px;
+    font-size: 3rem;
+
+    transition: color .3s;
+}
+
+.center-a:hover {
+    background: #E91E63;
+    color: #FCE4EC;
+}
+
+.user-name {
+    margin: 0;
+    font-size: 3vw;
+    color: #ffebee;
+    font-style: bold;
+}
+
+.group-name {
+    font-size: 5vw;
+    color: #ef9a9a;
+    margin-top: 10vh;
+}
+
+header {
+    height: 100%;
+    width: 33vw;
+    position: fixed;
+    left: 0;
+
+    padding: 4vw;
+
+    background: #f44336;
+}
+
+footer {
+    height: 16vh;
+    width: 59vw;
+    background: #fefefe;
+    color: #212121;
+
+    text-align: center;
+    line-height: 16vh;
+
+    position: fixed;
+    right: 0;
+    bottom: 0;
+
+    font-size: 5vw;
+}
+
+.outer-center-block {
+    height: 84vh;
+    width: 62vw;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.center-block {
+    width: 33vw;
+    height: auto;
+
+    font-size: 1vw !important;
+
+    /*
+    padding: 16px;
+    margin: auto;
+    margin-top: calc(50% - )
+    */
+
+    position: absolute;
+    right: 15vw;
+    top: 10vh;
+
+    border-radius: 0.5vw;
+
+    background: #fefefe;
+    color: #212121;
+
+}
+
+/*------------------------------*/
+
+ul {
+    padding-left: 2vw;
+}
+
+li {
+    list-style-type: none;
+}
+
+h1, h2, a {
+    margin: 0;
+}
+
+h1 {
+    color: #8BC34A;
+    font-style: bold;
+    font-size: 2vw;
+}
+
+h2 {
+    color: #009688;
+    font-style: italic;
+}
+
+a {
+    color: #00BCD4;
+    font-size: 1.2vw;
+    transition: color .3s;
+}
+
+a:hover {
+    color: #9C27B0;
+}
+
+.kitten {
+    padding-top: 25%;
+    width: 25%;
+    display: inline-block;
+    margin-top: 2vh;
+}
+
+.blue {
+    background: #03A9F4;
+}
