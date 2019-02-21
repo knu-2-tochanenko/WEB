@@ -4,15 +4,15 @@
     font-weight: 400;
 }
 
-body{    
+body {    
     color:white;
-    overflow:hidden;
+    margin: 1vw;
 
     font-family: "Google Sans", Calibri;
+    font-size: .7vw;
 }
 
 a {
-    margin-top: 10px;
     color: #03A9F4;
     transition: color .3s;
     text-decoration: none;
@@ -23,168 +23,169 @@ a:hover {
     color: #E91E63;
 }
 
-.page{
-    width:600px;
-    height:700px;
-    padding:10px;
-    position:absolute;
-    border-radius: 2px;
-}
+.page {
+    width:25vw;
+    height:32vw;
+    padding:1vw;
 
-
-.first-page, .second-page, .third-page {
     background: url('images/bg4.jpg');
+    background-size: 20vw;
+
+    position:absolute;
+    border-radius: .5vw;
 }
 
-.first-page, .third-page{
-    z-index:1;
+.first-page, .third-page {
+    z-index: 1;
 }
 
 .second-page {
-    top:100px;
-    left:500px;
-    z-index:2;
+    top: 14vw;
+    left: 21vw;
+    z-index: 2;
 }
 
 .third-page { 
-    right:5px;
+    left: 43vw;
 }
 
 .page, .content {
-    box-shadow: 0 8px 17px 2px rgba(0,0,0,0.14), 0 3px 14px 2px rgba(0,0,0,0.12), 0 5px 5px -3px rgba(0,0,0,0.2);
+    box-shadow: 0 .25vw .5vw .25vw rgba(0,0,0,0.2);
 }
 
 .main-block{
-    width:68%;
-    float:left;
+    width: 68%;
+    float: left;
+}
+
+.main {
+    text-align: center;
 }
 
 .images-block {
-    width:28%;
-    margin-left:4%;
-    float:left;
+    float: left;
+
+    width: 28%;
+    margin-left: 4%;
+}
+
+.first-page .images-block img {
+    height: 2.7vw;
+    width: 2.7vw;
 }
 
 .third-page .images-block img {
-    height: 70px;
+    height: 4.5vw;
+    width: 5.7vw;
 }
 
 img {
-    border:3px solid #fefefe;
-}
-
-.first-page .images-block img{
-    height: 50px;
-    width: 50px;
-}
-
-.main{
-    text-align:center;
-}
-
-.main-img{
-    margin-top:10px;
-    width: calc(100% - 10px);
-}
-
-.first-page .images-block div,
-.second-page .images-block div{
-    float:left;
-    margin-left:20px;
-    margin-top:10px;
-    width:50px;
-    text-align: center;
-}
-
-.third-page .images-block div{
-    float:left;
-    margin-left:20px;
-    margin-top:10px;
-    width:100px;
-    text-align: center;
-}
-
-.third-page .images-block div img{
-    width:100px;
-}
-
-.content {
-    color:black;
-    margin-top:8px;
+    border: .2vw solid #fefefe;
 }
 
 .content img {
-    border:3px solid lightgray;
-    float:left;
-    width:60%;
-    height:170px;
-    margin:10px;
+    width: 60%;
+    height: 7vw;
+
+    float: left;
+
+    margin-right: .3vw;
+    margin-bottom: .3vw;
+
+    border: .2vw solid lightgray;
 }
 
-.nav {
-    z-index: 5;
-    width:100%;
-    float:right;
-    height:30px;
-    padding-top:5px;
+.context-img {
+    height: 10vw;
+    margin-top: 1vw;
+    width: calc(100% - 1vw);
+}
+
+.first-page .images-block div,
+.second-page .images-block div,
+.third-page .images-block div {
+    float:left;
+    margin-top: 1vw;
+
+    text-align: center;
+}
+
+.first-page .images-block div,
+.second-page .images-block div {
+    width: 3.5vw;
+}
+
+
+.third-page .images-block div {
+    width: 7vw;
+}
+
+.content {
+    color: black;
+    margin-top: 1vw;
 }
 
 nav {
-    margin-top: 20px;
+    margin-top: .71vw;
 }
 
 li {
     width: 25%;
-    list-style-type: none;
-    float:left;
-    margin-right:5px;
-    border-top-left-radius:3px;
-    border-top-right-radius:3px;
-    background:#EEEEEE;
     height: 100%;
+    padding: .2vw;
+    
+    float:left;
     text-align: center;
-    padding:5px;
-    color:#673AB7;
     font-weight: bold;
+
+    list-style-type: none;
+    margin-right: .4vw;
+    
+    border-top-left-radius: .5vw;
+    border-top-right-radius: .5vw;
+    
+    background:#EEEEEE;
+    color:#673AB7;
+    
     transition: color .3s;
     cursor: pointer;
 }
 
-nav li:first-child{
+nav li:first-child {
     color: #E91E63; 
     background: white;
 }
 
-nav li:hover{
+nav li:hover {
     color: #E91E63; 
 }
 
-.second-page .main-block .menu li:first-child {
+.second-page .main-block li:first-child {
     background: #4CAF50;
     color: white;
 }
 
-.second-page .main-block .menu li:first-child:hover {
+.second-page .main-block li:first-child:hover {
     background: #03A9F4;
 }
 
-.second-page .main-block .menu li {
+.second-page .main-block li {
     background: #03A9F4;
     color: white;
     transition: background .3s;
 }
 
-.second-page .main-block .menu li:hover {
+.second-page .main-block li:hover {
     background: #4CAF50;
 }
 
 .content {
-    margin-top: 50px;
+    margin-top: 2vw;
     background: #fefefe;
-    padding: 16px;
+    padding: .5vw;
     z-index: 500;
 
-    border-top-right-radius: 2px;
-    border-bottom-right-radius: 2px;
-    border-bottom-left-radius: 2px;
+    border-top-right-radius: .5vw;
+    border-bottom-right-radius: .5vw;
+    border-bottom-left-radius: .5vw;
 }
