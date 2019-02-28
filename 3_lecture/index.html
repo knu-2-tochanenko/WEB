@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .strange {
+            height: 15vw;
+            width: 40vw;
+            border-top-right-radius: 5vw;
+            border-bottom-left-radius: 5vw;
+
+            background: #FFEB3B;
+            border: 0.5vw solid #03A9F4;
+
+            position: relative;
+
+            top: 50vh;
+            left: 50vw;
+
+            transform: translate(-50%, -50%);
+        }
+
+        .circle {
+            height: 5vw;
+            width: 5vw;
+
+            border-radius: 5vw;
+
+            background: #00BCD4;
+            border: 0.5vw solid #673AB7;
+
+            position: absolute;
+        }
+
+        .first {
+            bottom: 1vw;
+            left: 1vw;
+        }
+
+        .second {
+            top: 1vw;
+            right: 1vw;
+        }
+
+        .circle-static {
+            height: 128px;
+            width: 128px;
+            background: #2196F3;
+            border-radius: 64px;
+            position: fixed;
+        }
+
+        .triangle {
+            height: 0;
+            width: 0;
+            border-bottom: 50px solid red;
+            border-left: 50px solid white;
+            border-right: 50px solid white;
+        }
+
+        .figures{
+            height: 20vw;
+            position: fixed;
+            top: 80vh;
+            left: 50vw;
+            transform: translate(-50%, 0);
+        }
+
+        .figures-old {
+            top: 60vh !important;
+        }
+
+        .figure {
+            float: left;
+            margin-right: 1vw;
+            transition: .3s;
+        }
+
+        .square, .square-second, .square-old, .square-second-old {
+            height: 4vw;
+            width:  4vw;
+            background: #FF9800;
+        }
+
+        .left-triangle, .left-triangle-old {
+            height: 0;
+            width: 0;
+            border-left:    2vw solid #FF9800;
+            border-bottom:  2vw solid #FF9800;
+            border-top:     2vw solid transparent;
+            border-right:   2vw solid transparent;
+        }
+
+        .right-triangle, .right-triangle-old {
+            height: 0;
+            width: 0;
+            border-right:   2vw solid #FF9800;
+            border-bottom:  2vw solid #FF9800;
+            border-top:     2vw solid transparent;
+            border-left:    2vw solid transparent;
+        }
+
+        .right-triangle:hover {
+            border-right:   2vw solid #FF5722;
+            border-bottom:  2vw solid #FF5722;
+        }
+
+        .left-triangle:hover {
+            border-left:    2vw solid #009688;
+            border-bottom:  2vw solid #009688;
+        }
+
+        .square-second:hover {
+            background: #4FC3F7;
+        }
+
+        .square:hover {
+            background: #607D8B;
+        }
+
+        .all-blocks {
+            float: bottom;
+        }
+
+        .paragraphs {
+            position: fixed;
+            left: 50vw;
+            top: 0;
+            transform: translate(-50%, 0);
+            font-size: 1vw;
+            font-family: Calibri;
+        }
+
+        .paragraphs>p::before, .paragraphs>p::after {
+            content: "&";
+            background: #ffcdd2;
+            padding: .2vw;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="circle-static"></div>
+    <div class="strange">
+        <div class="circle first"></div>
+        <div class="circle second"></div>
+    </div>
+    <div class="figures">
+        <div class="all-blocks">
+            <div class="figure square-old"></div>
+            <div class="figure left-triangle-old"></div>
+            <div class="figure square-second-old"></div>
+            <div class="figure right-triangle-old"></div>
+        </div>
+        <div class="all-blocks">
+            <div class="figure square"></div>
+            <div class="figure left-triangle"></div>
+            <div class="figure square-second"></div>
+            <div class="figure right-triangle"></div>
+        </div>
+    </div>
+    <div class="paragraphs">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin non urna a arcu consectetur iaculis at quis diam. Nam ultrices sodales risus, in suscipit mi placerat id.</p>
+        <p>Morbi eget posuere sem. Vivamus vitae maximus enim. Aliquam erat volutpat. Nunc hendrerit pellentesque mauris eget dapibus.</p>
+        <p>Donec luctus tempor bibendum. Donec lacinia, ante sed bibendum lobortis, ipsum magna feugiat urna, sed iaculis elit neque non nisl.</p>
+        <p>Curabitur vitae vehicula quam. Pellentesque eu tortor a ex consequat hendrerit.</p>
+        <p>Pellentesque sit amet sagittis elit, luctus rhoncus ligula. Mauris nunc nisl, sodales quis gravida vitae, tempor non lacus.</p>
+    </div>
+</body>
+</html>
