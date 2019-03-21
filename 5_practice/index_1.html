@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Vladislav Tochanenko</title>
+        <style>
+            .block {
+                width: 32px;
+                height: 32px;
+                border: 1px solid black;
+                margin: 0;
+                margin-left: -2px;
+
+                display: inline-block;
+            }
+
+            .light {
+                background: #90A4AE;
+            }
+
+            .dark {
+                background: #455A64;
+            }
+
+            #main {
+                margin-top: 16px;
+            }
+
+            .container {
+                margin: 0;
+                margin-top: -5px;
+                display: inline-block;
+            }
+
+            /* Awesome styles */
+
+            body {
+                padding: 16px;
+                white-space: nowrap;
+            }
+
+            input::placeholder {
+                color: #9E9E9E;
+            }
+
+            input {
+                font-size: 1.1rem;
+
+                padding: 10px 16px 6px 16px;
+                border-radius: 2px;
+                outline-width: 0;
+
+                border: none;
+
+                transition: border-bottom .3s, background .3s;
+                -webkit-transition: border-bottom .3s, background .3s;
+
+                background: #F5F5F5;
+                color: #212121;
+                border-bottom: 2px solid #cecece;
+            }
+
+            input:focus {
+                border-bottom: 2px solid #2196F3;
+            }
+
+            input:hover {
+                background: #EEEEEE;
+            }
+
+            input::after {
+                background: #F5F5F5;
+            }
+
+            button:focus { outline:0; }
+
+            button:hover {
+                cursor: pointer;
+                box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.3);
+            }
+
+            button:active {
+                box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+                filter: brightness(90%);
+            }
+
+            button {
+                margin-top: -6px;
+                margin-left: 16px;
+
+                box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+                transition: box-shadow, filter 100ms;
+                transition: box-shadow 300ms, filter 100ms;
+
+                background: #2196F3;
+                color: #ffffff;
+
+                font-size: 1rem;
+                font-weight: 500;
+                line-height: 36px;
+                text-transform: uppercase;
+
+                height: 36px;
+                padding: 0 2rem;
+                border: none;
+                border-radius: 2px;
+                display: inline-block;
+                
+                vertical-align: middle;
+            }
+
+        </style>
+    </head>
+    <body>
+        <input type="number" id="firstNumber" placeholder="Rows">
+        <input type="number" id="secondNumber" placeholder="Columns">
+        <button id="btn">Submit</button>
+        <div id="main">
+
+        </div>
+    </body>
+
+    <script>
+            var main = document.getElementById('main');
+            var firstNumberField = document.getElementById('firstNumber');
+            var secondNumberField = document.getElementById('secondNumber');
+
+            document.getElementById('btn').onclick = function() {
+                main.innerHTML = '';
+
+                var n = Number(firstNumberField.value);
+                var m = Number(secondNumberField.value);
+
+                if (n == 0 || m == 0)
+                    alert('You must input number greater than 0');
+                else {
+                    for (var i = 0; i < n; i++) {
+                        var container = document.createElement('div');
+                        container.classList.add('container');
+                        
+                        if (i % 2 == 1) isDark = true;
+
+                        for (var j = 0; j < m; j++) {
+                        if ((i + j) % 2 == 1) {
+                                var blockDark = document.createElement('div');
+                                blockDark.classList.add('block');
+                                blockDark.classList.add('dark');
+                                container.appendChild(blockDark);
+                        }
+                        else {
+                                var blockLight = document.createElement('div');
+                                blockLight.classList.add('block');
+                                blockLight.classList.add('light');
+                                container.appendChild(blockLight);
+                        }
+                        }
+                        main.appendChild(container);
+                        main.appendChild(document.createElement("br"));
+                    }
+                }
+            }
+        </script>
+</html>
