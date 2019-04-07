@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Vladislav Tochanenko</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <div class="box center big-text"><h3>Замовлення на придбання товару</h3></div>
+        <div class="box">
+            <p class="inside-box">Назва товару</p>
+            <div class="inside-box">
+                <select id="books"></select>
+            </div>
+        </div>
+        <div class="box">
+            <p class="inside-box">Кількість</p>
+            <input onchange="updateData()" id="number-of-items" type="number" step="1" class="inside-box" value=0 min=0>
+            <p class="inside-box">Вартість замовлених книг: </p>
+            <p class="inside-box" id="price-result">0</p>
+        </div>
+        <div class="box">
+            Спосіб доставки замовлення:<br>
+            <input onchange="updateData()" type="radio" name="delivery" value="post" id="post" checked="checked">Поштою <span class="desc">(+ 30 грн.)</span><br>
+            <input onchange="updateData()" type="radio" name="delivery" value="to-home" id="home">Доставкою на дом <span class="desc">(+ 160 грн.)</span><br>
+            <input onchange="updateData()" type="checkbox" id="wrapping">У святковій упаковці <span class="desc">(+20% від вартості книги)</span>
+        </div>
+        <div class="box right">
+            <span>Загальна вартість замовлення: <span>
+            <span id="total-count" class="green">0</span>
+        </div>
+        <div class="box">
+            <h3>Дані замовника</h3>
+            <form action="" id="data">
+                <table>
+                    <tr>
+                        <td>Ім'я</td>
+                        <td><input type="text" id="nameField"></td>
+                    </tr>
+                    <tr>
+                        <td>Адреса</td>
+                        <td><input type="text" id="adress"></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+        <div class="box last">
+            <button id="sendButton" onclick="submit()">Відіслати</button>
+            <button id="resetButton" onclick="reset()">Відновити початкові дані</button>
+        </div>
+        <div id="check"></div>
+    </body>
+    <script src="script.js"></script>
+</html>
