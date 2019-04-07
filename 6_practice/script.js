@@ -1,8 +1,3 @@
-// In wrapping paper : +20%
-
-// Название товара, количество, цена, стоимость доставки, ну крч подробное все
-
-// Відновити початкові значення полів - все очистити. input type="reset"
 var books = [
     { name: 'Bjarne Stroustrup : The C++ Programming Language', price: 1100 },
     { name: 'Дмитрий Жемеров : Kotlin в действии', price: 1006 },
@@ -40,7 +35,7 @@ function updateData() {
     var wrappingTotal = 0;
     var number = Math.floor(Number(numberOfBooks.value));
     numberOfBooks.value = number;
-    
+
     var res = books[list.selectedIndex].price * number;
     numberOfBooksPrice.innerHTML = res;
     booksTotal = res;
