@@ -1,0 +1,96 @@
+@font-face {
+    font-family: "Google Sans";
+    src: local(Google Sans Regular), url("http://beta.tochanenko.com/font/googlesans/GoogleSans-Regular.ttf") format("ttf");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Google Sans";
+    src: local(Google Sans Regular Italic), url("http://beta.tochanenko.com/font/googlesans/GoogleSans-Italic.ttf") format("ttf");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Google Sans";
+    src: local(Google Sans Medium), url("http://beta.tochanenko.com/font/googlesans/GoogleSans-Medium.ttf") format("ttf");
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "Google Sans";
+    src: local(Google Sans Medium Italic), url("http://beta.tochanenko.com/font/googlesans/GoogleSans-MediumItalic.ttf") format("ttf");
+    font-weight: 500;
+}
+    
+@font-face {
+    font-family: "Google Sans";
+    src: local(Google Sans Bold), url("http://beta.tochanenko.com/font/googlesans/GoogleSans-Bold.ttf") format("ttf");
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: "Google Sans";
+    src: local(Google Sans Bold Italic), url("http://beta.tochanenko.com/font/googlesans/GoogleSans-BoldItalic.ttf") format("ttf");
+    font-weight: 700;
+}
+
+body, input, select, option {
+    font-family: 'Google Sans', Calibri;
+    font-size: 1.3rem;
+}
+
+input {
+    padding: 16px;
+}
+
+input[type=button] {
+    background-color: #8BC34A;
+    color: white;
+    border: none;
+    border-radius: 4px;
+
+    cursor: pointer;
+
+    -webkit-tap-highlight-color: transparent;
+
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+    
+    transition: box-shadow, filter 100ms;
+    -webkit-transition: -webkit-box-shadow 300ms, filter 100ms;
+    transition: -webkit-box-shadow 300ms, filter 100ms;
+    transition: box-shadow 300ms, filter 100ms;
+    transition: box-shadow 300ms, -webkit-box-shadow 300ms, filter 100ms;
+}
+
+input[type=button]:hover {
+    box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.3);
+}
+
+input[type=button]:active {
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+}
+
+input[type=text] {
+    border: none;
+    border-radius: 4px;
+    border-bottom: 3px solid #8BC34A;
+    background-color: #F5F5F5;
+}
+
+ul {
+    list-style: none;
+    padding-left: 16px;
+}
+
+li {
+    margin-top: 8px;
+}
+
+li:before {
+    content: '>';
+    font-weight: bold;
+    margin-right: 16px;
+}

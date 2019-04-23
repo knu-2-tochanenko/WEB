@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Vladislav Tochanenko</title>
+        <style>
+            /* Awesome styles */
+            body {
+               padding: 16px;
+               white-space: nowrap;
+               font-family: Calibri;
+            }
+            p {
+                font-size: 2rem;
+            }
+        </style>
+    </head>
+    <body>
+        <input id="name" type="text" step="1" placeholder="Количество товара">
+        <input id="cost" type="number" step="0.01" placeholder="Цена товара">
+        <button id="count">Посчитать</button>
+        <p id="result">Введите данные</p>
+    </body>
+    <script>
+
+
+        var nameF = document.getElementById('name');
+        var costF = document.getElementById('cost');
+        var resultF = document.getElementById('result');
+        var count = document.getElementById('count')
+
+        var number;
+        costF.onchange = function() {
+            number = Number(costF.value).toFixed(2);
+            costF.value = number;
+        }
+
+        var amount;
+        nameF.onchange = function() {
+            amount = Number(nameF.value).toFixed(0);
+            nameF.value = amount;
+        }
+
+        count.onclick = function() {
+            number = Number(costF.value).toFixed(2);
+            amount = Number(nameF.value).toFixed(0);
+            number *= amount;
+            var f = Math.trunc(number);
+            var s = Math.trunc(((number - f) * 100) % 100);
+            var str = 'Итоговая стоимость : ' + f;
+            if ((f % 100 >= 10 && f % 100 <= 20) ||
+            (f % 10 >= 5) || (f % 10 == 0)) {
+                str += ' гривен';
+            }
+            else if (f % 10 == 1) {
+                str += ' гривна';
+            }
+            else if (f % 10 == 2 || f % 10 == 3 || f % 10 == 4) {
+                str += ' гривны';
+            }
+
+            str += ' и ' + s;
+            console.log(s);
+            
+
+            if ((s % 100 >= 10 && s % 100 <= 20) ||
+            (s % 10 >= 5) || (s % 10 == 0)) {
+                str += ' копеек';
+            }
+            else if (s % 10 == 1) {
+                str += ' копейка';
+            }
+            else if (s % 10 == 2 || s % 10 == 3 || s % 10 == 4) {
+                str += ' копейки';
+            }
+
+            resultF.innerHTML = str;
+        }
+    </script>
+</html>

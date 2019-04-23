@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Vladislav Tochanenko</title>
+        <style>
+            /* Awesome styles */
+            body {
+               padding: 16px;
+               font-family: Calibri;
+            }
+            p {
+                font-size: 2rem;
+            }
+        </style>
+    </head>
+    <body>
+        <span>аыаыаыаы</span><br>
+        <span>аыаыаыаы</span><br>
+        <span>аыаыаыаы</span><br>
+        <span>аыаыаыаы</span><br>
+        <span>аыаыаыаы</span><br>
+        <p>Ауауауауауау</p>
+        <p>Ауауауауауау</p>
+        <p>Ауауауауауау</p>
+        <div>оыоыоыоы</div>
+        <div>оыоыоыоы</div>
+        <div>оыоыоыоы</div>
+        <div>оыоыоыоы</div>
+        <div>оыоыоыоы</div>
+        <button id="updatePis">Тык</button>
+    </body>
+    <script>
+        document.getElementById('updatePis').onclick = function() {
+        for (i in document.getElementsByTagName('p'))
+            document.getElementsByTagName('p')[i].style.backgroundColor = '#F44336';
+        }
+    </script>
+</html>
