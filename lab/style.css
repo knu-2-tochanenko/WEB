@@ -3,14 +3,51 @@ html {
 	font-size: 14px;
 	line-height: 22px;
 	color: #777;
+    text-rendering: optimizeLegibility;
+}
+
+body {
+	margin: 0;
 }
 
 header {
 	background: rgb(244,67,54);
-	color: white;
+	background: #212121;
+	height: 164px;
+	padding-top: 64px;
 }
 
-header, footer {
+.menu {
+	height: 80px;
+	background: #000;
+}
+
+header, footer, .menu {
 	width: 100%;
 	min-width: 980px;
+	color: #F5F5F5;
+}
+
+header .content img {
+	height: 100px;
+}
+
+.logo-block {
+	float: left;
+	-webkit-filter: drop-shadow(.3rem .3rem .2rem rgba(0, 0, 0, .3));
+    filter: drop-shadow(.3rem .3rem .2rem rgba(0, 0, 0, .3));
+}
+
+.logo-text {
+	margin-left: 16px;
+}
+
+.content {
+	width: 980px;
+	height: auto;
+	margin: auto;
+}
+
+.logo {
+	font-family: 'Google Sans';
 }
