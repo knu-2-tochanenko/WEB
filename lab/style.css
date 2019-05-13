@@ -1,3 +1,11 @@
+.colors-set {
+	color: #682323;
+	color: #704E4B;
+	color: #F17E4D;
+	color: #E7975C;
+	color: #F7CE41;
+}
+
 html {
 	font-family: 'PT Sans', sans-serif;
 	font-size: 14px;
@@ -196,4 +204,53 @@ header .content img {
 
 .breadcrumps ul li:last-child:after {
 	content: '';
+}
+
+.navigation-block {
+	width: 220px;
+}
+
+.navigation-block ul li {
+	margin-top: 4px;
+	padding: .2rem .7rem;
+	list-style: none;
+
+	cursor: pointer;
+
+	vertical-align: middle;
+	-webkit-transform: perspective(1px) translateZ(0);
+	transform: perspective(1px) translateZ(0);
+	box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+	position: relative;
+	-webkit-transition-property: color;
+	transition-property: color;
+	-webkit-transition-duration: 0.3s;
+	transition-duration: 0.3s;
+}
+
+.navigation-block ul li:before {
+	content: "";
+	position: absolute;
+	z-index: -1;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: #F17E4D;
+	-webkit-transform: scaleX(0);
+	transform: scaleX(0);
+	-webkit-transform-origin: 0 50%;
+	transform-origin: 0 50%;
+	-webkit-transition-property: transform;
+	transition-property: transform;
+	-webkit-transition-duration: 0.3s;
+	transition-duration: 0.3s;
+}
+
+.navigation-block ul li:hover, .navigation-block ul li:focus, .navigation-block ul li:active {
+	color: white;
+}
+.navigation-block ul li:hover:before, .navigation-block ul li:focus:before, .navigation-block ul li:active:before {
+	-webkit-transform: scaleX(1);
+	transform: scaleX(1);
 }
