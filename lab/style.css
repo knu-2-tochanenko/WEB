@@ -208,6 +208,7 @@ header .content img {
 
 .navigation-block {
 	width: 220px;
+	float: left;
 }
 
 .navigation-block ul li {
@@ -215,8 +216,12 @@ header .content img {
 	padding: .2rem .7rem;
 	list-style: none;
 
-	cursor: pointer;
+	font-weight: bold;
 
+	cursor: pointer;
+}
+
+.navigation-block ul li {
 	vertical-align: middle;
 	-webkit-transform: perspective(1px) translateZ(0);
 	transform: perspective(1px) translateZ(0);
@@ -253,4 +258,77 @@ header .content img {
 .navigation-block ul li:hover:before, .navigation-block ul li:focus:before, .navigation-block ul li:active:before {
 	-webkit-transform: scaleX(1);
 	transform: scaleX(1);
+}
+
+.navigation-block ul ul li {
+	font-weight: normal;
+}
+
+.content-block {
+	margin-top: 16px;
+	margin-left: 220px;
+	width: 760px;
+	height: 900px;
+}
+
+.element {
+	width: 220px;
+	height: 310px;
+	padding: 8px;
+	background: white;
+	border-radius: 5px;
+
+	cursor: pointer;
+
+	position: relative;
+	float: left;
+	margin-right: 16px;
+	margin-bottom: 16px;
+
+	/*
+	-webkit-box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+	box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+	*/
+	-webkit-box-shadow: 0 2px 2px 0 rgba(0,0,0,0.04), 0 3px 1px -2px rgba(0,0,0,0.02), 0 1px 5px 0 rgba(0,0,0,0.1);
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.04), 0 3px 1px -2px rgba(0,0,0,0.02), 0 1px 5px 0 rgba(0,0,0,0.1);
+	-webkit-transition-property: -webkit-box-shadow;
+	transition-property: box-shadow;
+	-webkit-transition-duration: 0.3s;
+	transition-duration: 0.3s;
+}
+
+.element:hover {
+	-webkit-box-shadow: 0 8px 17px 2px rgba(0,0,0,0.14), 0 3px 14px 2px rgba(0,0,0,0.12), 0 5px 5px -3px rgba(0,0,0,0.2);
+    box-shadow: 0 8px 17px 2px rgba(0,0,0,0.14), 0 3px 14px 2px rgba(0,0,0,0.12), 0 5px 5px -3px rgba(0,0,0,0.2);
+}
+
+.element img {
+	height: 220px;
+	display:block;
+    margin:auto;
+}
+
+.element .price {
+	position: absolute;
+	bottom: 0;
+}
+
+.element .price:before {
+	content: '$';
+}
+
+.element i {
+	font-size: 2.5rem;
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+
+	-webkit-transition-property: color;
+	transition-property: color;
+	-webkit-transition-duration: 0.3s;
+	transition-duration: 0.3s;
+}
+
+.element i:hover {
+	color: #4CAF50;
 }
