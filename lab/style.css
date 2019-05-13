@@ -19,7 +19,6 @@ body {
 }
 
 header {
-	background: rgb(244,67,54);
 	background: #212121;
 	height: 228px;
 }
@@ -265,10 +264,13 @@ header .content img {
 }
 
 .content-block {
+	position: relative;
 	margin-top: 16px;
 	margin-left: 220px;
 	width: 760px;
-	height: 900px;
+	display: flex;
+	flex-flow: row;
+	flex-wrap: wrap;
 }
 
 .element {
@@ -331,4 +333,74 @@ header .content img {
 
 .element i:hover {
 	color: #4CAF50;
+}
+
+.pages-count {
+	padding-top: 32px;
+	width: 100%;
+	clear: both;
+	position: relative;
+	text-align: center;
+}
+
+.pages-count span {
+	font-size: 1.3rem;
+	margin: 0 16px;
+	cursor: pointer;
+}
+
+.current-page {
+	font-size: 2rem !important;
+	font-weight: bold;
+	cursor: text;
+}
+
+.half-block {
+	position: relative;
+	width: 348px;
+	float: left;
+	padding: 16px;
+}
+
+.upper-line:before {
+	content: '';
+	width: 100%;
+	height: 1px;
+	margin-top: 32px;
+	background: #777;
+}
+
+footer {
+	padding-top: 30px;
+	height: 190px;
+	background: #212121;
+}
+
+footer .content {
+	display: flex;
+	flex-flow: row;
+	justify-content: space-between;
+}
+
+footer > .content > div {
+	flex-grow: 1;
+}
+
+footer ul {
+	list-style: none;
+	margin: 0;
+}
+
+footer li {
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+.footer-logo, .footer-logo img, .footer-logo-text {
+	float: left;
+}
+
+.footer-logo-text {
+	line-height: 50px;
+	padding-left: 8px;
 }
