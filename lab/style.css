@@ -528,13 +528,8 @@ footer li {
 	border-radius: 50px;
 	width: 50px;
 	height: 50px;
-	line-height: 50px;
 
 	background: rgba(255, 255, 255, 0.822);
-
-	font-size: 3rem;
-	font-family: Consolas;
-	color: black;
 	-webkit-box-shadow: .1rem .1rem .1rem rgba(0, 0, 0, .3);
     box-shadow: .1rem .1rem .1rem rgba(0, 0, 0, .3);
 }
@@ -545,12 +540,12 @@ footer li {
     content: "";
     display: inline-block;
     /* By using an em scale, the arrows will size with the font */
-    width: 0.4em;
-    height: 0.4em;
-    border-right: 0.1em solid black;
-    border-top: 0.1em solid black;
+    width: 0.7em;
+    height: 0.7em;
+    border-right: 0.4em solid black;
+    border-top: 0.4em solid black;
     transform: rotate(45deg);
-    margin-right: 0.2em;
+    margin-right: 0.3em;
 }
 
 #prev-slide::before {
@@ -559,12 +554,12 @@ footer li {
     content: "";
     display: inline-block;
     /* By using an em scale, the arrows will size with the font */
-    width: 0.4em;
-    height: 0.4em;
-    border-right: 0.1em solid black;
-    border-top: 0.1em solid black;
+    width: 0.7em;
+    height: 0.7em;
+    border-right: 0.4em solid black;
+    border-top: 0.4em solid black;
     transform: rotate(225deg);
-    margin-left: 0.2em;
+    margin-left: 0.3em;
 }
 
 #prev-slide {
