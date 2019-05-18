@@ -11,7 +11,21 @@
 		<title>Sahara</title>
 	</head>
 
-	<ul class="slide-left-menu">
+	<div id="fade"></div>
+	<form id="feedback-form">
+		<h1>Обратная связь</h1>
+		<label for="name-f">Ваше имя</label>
+		<input placeholder="ФИО (больше 4 символов)" type="text" id="name-f" minlength="4">
+		<label for="phone-f">Телефон</label>
+		<input placeholder="095-777-7777" type="tel" id="phone-f" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+		<label for="email-f">Email</label>
+		<input placeholder="name@gmail.com" type="email" id="email-f">
+		<label for="message-f">Сообщение</label>
+		<textarea id="message-f"></textarea>
+		<div class="button" id="submit-button">Отправить</div>
+	</form>
+
+	<ul id="slide-left-menu">
 		<li>Ноутбуки</li>
 		<li>Смартфоны</li>
 		<ul>
@@ -23,7 +37,7 @@
 		<li>Умные часы</li>
 		<li>Чехлы и пленки</li>
 	</ul>
-	<ul class="slide-top-menu">
+	<ul id="slide-top-menu">
 		<li>
 			<i class="material-icons">home</i>
 			Главная
@@ -44,7 +58,13 @@
 			<i class="material-icons">person</i>
 			Контакты
 		</li>
+		<li id="mobile-feedback">
+			Оставить отзыв
+		</li>
 	</ul>
+
+	<div id="menu-fade"></div>
+	<div id="left-fade"></div>
 
 	<body>
 		<header>
@@ -59,7 +79,7 @@
 				<div class="phone-block">
 					<p>+38 (093) 131-31-31</p>
 					<p>+38 (091) 131-31-31</p>
-					<p class="feedback">Обратная связь</p>
+					<p class="feedback" id="feedback-button">Обратная связь</p>
 				</div>
 			</div>
 		</header>
@@ -91,8 +111,8 @@
 		</div>
 
 		<div class="mobile-nav">
-			<div class="side-opener"><i class="material-icons">chrome_reader_mode</i></div>
-			<div class="menu-opener">Menu</div>
+			<div id="side-opener"><i class="material-icons">chrome_reader_mode</i></div>
+			<div id="menu-opener">Menu</div>
 		</div>
 
 		<div class="slider">
