@@ -12,11 +12,11 @@ window.onload = async function() {
     feedbackForm.reset();
     while (true) {
         changeSlide(true);
-        await sleep(4000);
+        await sleep(4600);
     }
 }
 
-function changeSlide(isNext) {
+async function changeSlide(isNext) {
     images[imageNumber].style.opacity = '0';
 
     if (isNext) {
@@ -28,6 +28,8 @@ function changeSlide(isNext) {
             imageNumber = 4;
         else imageNumber--;
     }
+
+    await sleep(600);
 
     images[imageNumber].style.opacity = '1';
 }

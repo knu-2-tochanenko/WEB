@@ -452,6 +452,7 @@ footer li {
 
 #slide-left-menu {
 	top: 40px;
+	left: -220px;
 	z-index: 490;
 	width: 200px;
 	margin: 0;
@@ -674,7 +675,7 @@ footer li {
 
 .hidden-img {
 	opacity: 0;
-	transition: opacity .3s;
+	transition: opacity .8s;
 }
 
 @media only screen and (max-width: 1020px) {
