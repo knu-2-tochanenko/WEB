@@ -34,26 +34,36 @@ document.write(`
 		<li>Чехлы и пленки</li>
 	</ul>
 	<ul id="slide-top-menu">
-		<li>
-			<i class="material-icons">home</i>
-			Главная
-		</li>
-		<li>
-			<i class="material-icons">view_module</i>
-			Каталог
-		</li>
-		<li>
-			<i class="material-icons">credit_card</i>
-			Доставка и оплата
-		</li>
-		<li>
-			<i class="material-icons">account_balance_wallet</i>
-			Прайс-лист
-		</li>
-		<li>
-			<i class="material-icons">person</i>
-			Контакты
-		</li>
+		<a href="index.html">
+		    <li>
+                <i class="material-icons">home</i>
+                    Главная
+            </li>
+		</a>
+		<a href="catalog.html">
+            <li>
+                <i class="material-icons">view_module</i>
+                Каталог
+            </li>
+		</a>
+		<a href="payment.html">
+            <li>
+                <i class="material-icons">credit_card</i>
+                Доставка и оплата
+            </li>
+		</a>
+		<a href="pricelist.html">
+            <li>
+                <i class="material-icons">account_balance_wallet</i>
+                Прайс-лист
+            </li>
+		</a>
+		<a href="contacts.html">
+            <li>
+                <i class="material-icons">person</i>
+                Контакты
+            </li>
+		</a>
 		<li id="mobile-feedback">
 			Оставить отзыв
 		</li>
@@ -82,26 +92,36 @@ document.write(`
 		<div class="menu">
 			<div class="content">
 				<ul>
-					<li>
-						<i class="material-icons">home</i>
-						Главная
-					</li>
-					<li>
-						<i class="material-icons">view_module</i>
-						Каталог
-					</li>
-					<li>
-						<i class="material-icons">credit_card</i>
-						Доставка и оплата
-					</li>
-					<li>
-						<i class="material-icons">account_balance_wallet</i>
-						Прайс-лист
-					</li>
-					<li>
-						<i class="material-icons">person</i>
-						Контакты
-					</li>
+					<a href="index.html">
+                        <li>
+                            <i class="material-icons">home</i>
+                                Главная
+                        </li>
+                    </a>
+                    <a href="catalog.html">
+                        <li>
+                            <i class="material-icons">view_module</i>
+                            Каталог
+                        </li>
+                    </a>
+                    <a href="payment.html">
+                        <li>
+                            <i class="material-icons">credit_card</i>
+                            Доставка и оплата
+                        </li>
+                    </a>
+                    <a href="pricelist.html">
+                        <li>
+                            <i class="material-icons">account_balance_wallet</i>
+                            Прайс-лист
+                        </li>
+                    </a>
+                    <a href="contacts.html">
+                        <li>
+                            <i class="material-icons">person</i>
+                            Контакты
+                        </li>
+                    </a>
 				</ul>
 			</div>
 		</div>
