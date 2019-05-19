@@ -977,7 +977,7 @@ input:invalid {
 
 	font-size: 1.3rem;
 
-	padding: 0 16px 0 0;
+	padding: 0 16px 32px 0;
 }
 
 .about-block .material-icons {
@@ -1029,8 +1029,8 @@ input:invalid {
 	-webkit-box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
     box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
 
-    margin: 2rem;
-    padding: 2rem;
+    margin: 16px;
+    padding: 32px;
 
     font-size: 1.2rem;
 }
@@ -1042,7 +1042,8 @@ input:invalid {
 
 
 .delivery div, .payment div {
-    padding: 2rem;
+	padding-left: 16px;
+	padding-bottom: 16px;
 }
 
 .delivery + .delivery, .payment + .payment {
@@ -1080,17 +1081,17 @@ p {
 }
 
 .info-left {
-    padding-right: 2rem;
+    padding-right: 16px;
     width: 50%;
     border-right: 1px #777 solid;
 }
 
 .info-right {
-    padding-left: 2rem;
+    padding-left: 16px;
     width: 50%;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1020px) {
     .info {
         display: flex;
         flex-direction: column;
@@ -1104,7 +1105,7 @@ p {
     }
 
     .info-left{
-        padding-bottom: 2rem;
-        border-bottom: .3rem #ea3a5a solid;
+        padding-bottom: 16px;
+        border-bottom: 1px #777 solid;
     }
 }

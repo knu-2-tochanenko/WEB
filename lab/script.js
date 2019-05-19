@@ -102,8 +102,8 @@ function closeLeft() {
     leftFade.style.display = "none";
     mobileLeft.style.left = "-220px";
 }
-/////////////////////////////////////////////////////////////////////
 
+/////////////////////////////////////////////////////////////////////
 
 let feedbackButton = document.getElementById("feedback-button");
 let fade = document.getElementById("fade");
