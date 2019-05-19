@@ -744,7 +744,6 @@ footer a {
 	transition: opacity .8s;
 }
 
-/*-------------------------------------------------------------------------*/
 #fade {
     left: 0;
     top: 0;
@@ -770,9 +769,13 @@ footer a {
     height: 40rem;
     position: fixed;
     background: white;
-	z-index: 1001;
-	
 	color: #212121;
+	
+	z-index: 1001;
+    display: none;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-content: center;
 
     text-align: center;
     font-size: 1.4rem;
@@ -783,10 +786,6 @@ footer a {
 	-webkit-box-shadow: 0 8px 17px 2px rgba(0,0,0,0.14), 0 3px 14px 2px rgba(0,0,0,0.12), 0 5px 5px -3px rgba(0,0,0,0.2);
     box-shadow: 0 8px 17px 2px rgba(0,0,0,0.14), 0 3px 14px 2px rgba(0,0,0,0.12), 0 5px 5px -3px rgba(0,0,0,0.2);
 
-    display: none;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-content: center;
 }
 
 #feedback-form h1 {
@@ -930,8 +929,13 @@ input:invalid {
 .pricelist-table tr td {
 	padding: 4px 0 4px 8px;
 }
+
 .pricelist-table tr:hover {
 	background: #cacaca !important;
+}
+
+.pricelist-table .table-header:hover {
+	background: #212121 !important;
 }
 
 /* MAIN PAGE */
@@ -1019,23 +1023,19 @@ input:invalid {
 }
 
 /* PAYMENT AND CONTACTS */
-.delivery-main, .payment-main, .contacts-main, .info {
+.delivery-block, .payment-block, .contacts-block, .info {
+    font-size: 1.2rem;
+    margin: 16px;
+    padding: 32px;
     display: flex;
     flex-direction: column;
 	position: relative;
-	
 	border-radius: 5px;
-
 	-webkit-box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
     box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
-
-    margin: 16px;
-    padding: 32px;
-
-    font-size: 1.2rem;
 }
 
-.delivery-main .material-icons, .payment-main .material-icons {
+.delivery-block .material-icons, .payment-block .material-icons {
     display: inline-block;
     color: #F17E4D;
 }
@@ -1050,7 +1050,7 @@ input:invalid {
     border-top: 1px #777 solid;
 }
 
-.delivery-main h1, .payment-main h1, .contacts-main h1 {
+.delivery-block h1, .payment-block h1, .contacts-block h1 {
 	font-size: 2.4rem;
 	margin: 0 0 32px 8px;
 }
@@ -1080,13 +1080,13 @@ p {
     justify-content: space-around;
 }
 
-.info-left {
+.left-con-block {
     padding-right: 16px;
     width: 50%;
     border-right: 1px #777 solid;
 }
 
-.info-right {
+.right-con-block {
     padding-left: 16px;
     width: 50%;
 }
@@ -1098,13 +1098,13 @@ p {
         justify-content: space-around;
     }
 
-    .info-left, .info-right {
+    .left-con-block, .right-con-block {
         width: 100%;
         padding: 0;
         border: 0;
     }
 
-    .info-left{
+    .left-con-block{
         padding-bottom: 16px;
         border-bottom: 1px #777 solid;
     }

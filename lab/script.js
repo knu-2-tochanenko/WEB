@@ -46,8 +46,8 @@ document.getElementById('next-slide').onclick = function() {
     changeSlide(true);
 }
 
-
 /////////////////////////////////////////////////////////////////////
+
 let menuOpener = document.getElementById("menu-opener");
 let mobileMenu = document.getElementById("slide-top-menu");
 
@@ -129,21 +129,19 @@ let message = document.getElementById("message-f");
 message.addEventListener("input", validateMessage);
 
 function validateFeedbackForm(event) {
-    if(!validateName() || !validatePhone() || !validateEmail() || !validateMessage()){
+    if (!validateName() || !validatePhone() || !validateEmail() || !validateMessage()) {
         name.required=true;
         phone.required=true;
         email.required=true;
         message.required=true;
-        alert("Fill form correct!");
+        alert("Fill the for correctly!");
     }
-    else{
-    hideFeedbackForm();
-    }
+    else { hideFeedbackForm(); }
 }
 
 function validateName() {
     if (name.validity.rangeUnderflow) {
-        name.setCustomValidity("Name has to be >4 characters long.");
+        name.setCustomValidity("Insert more then 4 characters");
         return false;
     } else {
         name.setCustomValidity("");
@@ -163,7 +161,7 @@ function validatePhone() {
 
 function validateEmail() {
     if (email.validity.typeMismatch) {
-        email.setCustomValidity("Wrong email");
+        email.setCustomValidity("Email format: name@domain.com");
         return false;
     } else {
         email.setCustomValidity("");
