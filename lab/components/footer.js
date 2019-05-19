@@ -4,11 +4,21 @@ document.write(`
 				<div>&copy; 1997 - 2019, Sahara<sup>&trade;</sup><br>mail@sahara.com</div>
 				<div>
 					<ul>
-						<li>Главная</li>
-						<li>Каталог</li>
-						<li>Доставка и оплата</li>
-						<li>Прайс-лист</li>
-						<li>Контакты</li>
+						<a href="index.html">
+							<li>Главная</li>
+						</a>
+						<a href="catalog.html">
+							<li>Каталог</li>
+						</a>
+						<a href="payment.html">
+							<li>Доставка и оплата</li>
+						</a>
+						<a href="pricelist.html">
+							<li>Прайс-лист</li>
+						</a>
+						<a href="contacts.html">
+							<li>Контакты</li>
+						</a>
 					</ul>
 				</div>
 				<div class="footer-logo">

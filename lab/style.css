@@ -6,12 +6,16 @@
 	color: #F7CE41;
 }
 
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Google Sans' !important;
+}
+
 html {
 	font-family: 'PT Sans', sans-serif;
 	font-size: 14px;
 	line-height: 22px;
 	color: #777;
-    text-rendering: optimizeLegibility;
+	text-rendering: optimizeLegibility;
 }
 
 body {
@@ -142,7 +146,7 @@ header .content img {
 	justify-content: center;
 }
 
-.menu .content ul li {
+.menu .content ul a {
 	font-size: 1.5rem;
 	margin: 0 10px;
 	padding: 0 10px;
@@ -158,23 +162,23 @@ header .content img {
 	transition-duration: 0.3s;
 }
 
-.menu .content ul li i {
+.menu .content ul a li i {
 	vertical-align: middle !important;
 	padding-bottom: 5px;
 	padding-right: 3px;
 }
 
-.menu .content ul li:after {
+.menu .content ul a:after {
 	content: '';
 	background: #777;
 	height: 30px;
 	width: 1px;
 	position: absolute;
-	right: -1rem;
+	right: -10px;
 	top: 10px;
 }
 
-.menu .content ul li:before {
+.menu .content ul a:before {
 	content: "";
 	position: absolute;
 	z-index: -1;
@@ -193,15 +197,15 @@ header .content img {
 	transition-duration: 0.3s;
 }
 
-.menu .content ul li:hover, .menu .content ul li:focus, .menu .content ul li:active {
+.menu .content ul a:hover, .menu .content ul a:focus, .menu .content ul a:active {
 	color: white;
 }
-.menu .content ul li:hover:before, .menu .content ul li:focus:before, .menu .content ul li:active:before {
+.menu .content ul a:hover:before, .menu .content ul a:focus:before, .menu .content ul a:active:before {
 	-webkit-transform: scaleX(1);
 	transform: scaleX(1);
 }
 
-.menu .content ul li:last-child:after {
+.menu .content ul a:last-child:after {
 	background: transparent;
 }
 
@@ -417,6 +421,10 @@ footer li {
 	cursor: pointer;
 }
 
+footer a {
+	color: white;
+}
+
 .footer-logo, .footer-logo img, .footer-logo-text {
 	float: left;
 }
@@ -566,7 +574,7 @@ footer li {
 	}
 
 	.main-block {
-		padding-bottom: 240px;
+		padding-bottom: 350px;
 	}
 
 	.navigation-block, .menu, .phone-block {
@@ -582,7 +590,25 @@ footer li {
 	}
 
 	footer .content {
+		text-align: center;
+		justify-content: space-between;
 		flex-direction: column;
+	}
+
+	footer .content div {
+        margin-bottom: 16px;
+        width: fit-content;
+        justify-self: center;
+		align-self: center;
+		text-align: left;
+	}
+	
+	footer a {
+		color: white;
+	}
+
+	footer > .content > div {
+		flex-grow: 0;
 	}
 
 	.content-block {
@@ -607,6 +633,10 @@ footer li {
 	#slide-top-menu, #slide-left-menu {
 		display: block;
 		position: fixed;
+	}
+
+	.slider {
+		display: none;
 	}
 }
 
@@ -713,14 +743,6 @@ footer li {
 	opacity: 0;
 	transition: opacity .8s;
 }
-
-@media only screen and (max-width: 1020px) {
-	.slider {
-		display: none;
-	}
-}
-
-
 
 /*-------------------------------------------------------------------------*/
 #fade {
@@ -996,3 +1018,93 @@ input:invalid {
 	}
 }
 
+/* PAYMENT AND CONTACTS */
+.delivery-main, .payment-main, .contacts-main, .info {
+    display: flex;
+    flex-direction: column;
+	position: relative;
+	
+	border-radius: 5px;
+
+	-webkit-box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+
+    margin: 2rem;
+    padding: 2rem;
+
+    font-size: 1.2rem;
+}
+
+.delivery-main .material-icons, .payment-main .material-icons {
+    display: inline-block;
+    color: #F17E4D;
+}
+
+
+.delivery div, .payment div {
+    padding: 2rem;
+}
+
+.delivery + .delivery, .payment + .payment {
+    border-top: 1px #777 solid;
+}
+
+.delivery-main h1, .payment-main h1, .contacts-main h1 {
+	font-size: 2.4rem;
+	margin: 0 0 32px 8px;
+}
+
+h3 {
+    font-size: 2rem;
+    display: inline-block;
+	width: 100%;
+	margin: 16px 0;
+}
+
+h4 {
+	margin: 8px 0;
+}
+
+p {
+	margin: 4px 0;
+}
+
+#map {
+    width: 100%;
+}
+
+.info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.info-left {
+    padding-right: 2rem;
+    width: 50%;
+    border-right: 1px #777 solid;
+}
+
+.info-right {
+    padding-left: 2rem;
+    width: 50%;
+}
+
+@media screen and (max-width: 1000px) {
+    .info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .info-left, .info-right {
+        width: 100%;
+        padding: 0;
+        border: 0;
+    }
+
+    .info-left{
+        padding-bottom: 2rem;
+        border-bottom: .3rem #ea3a5a solid;
+    }
+}

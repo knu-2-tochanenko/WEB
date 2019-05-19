@@ -1,6 +1,7 @@
 document.write(`
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
 
+		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/>
 		<link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 		<link rel="stylesheet" href="http://tools.tochanenko.com/googlesans.css">
