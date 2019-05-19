@@ -22,7 +22,7 @@ document.write(`
 					</ul>
 				</div>
 				<div class="footer-logo">
-					<img src="images/sahara.png" height="50px">
+					<img src="images/sahara.png" height="50px" alt="logo">
 					<div class="footer-logo-text">Сайт собственной разработки.</div>
 				</div>
 			</div>

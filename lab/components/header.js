@@ -38,7 +38,7 @@ document.write(`
 		<a href="index.html">
 		    <li>
                 <i class="material-icons">home</i>
-                    Главная
+                Главная
             </li>
 		</a>
 		<a href="catalog.html">
@@ -77,7 +77,7 @@ document.write(`
 		<header>
 			<div class="content">
 				<div class="logo-block">
-					<img src="images/sahara.png">
+					<img src="images/sahara.png" alt="logo">
 					<div class="logo-text">
 						<h1 class="logo">Sahara<sap>&trade;</sap></h1>
 						<h3 class="sublogo">A great place to shop</h3>
@@ -129,7 +129,7 @@ document.write(`
 
 		<div class="mobile-nav">
 			<div id="side-opener"><i class="material-icons">chrome_reader_mode</i></div>
-			<div id="menu-opener">Menu</div>
+			<div id="menu-opener">Меню</div>
 		</div>
 
 		<div class="slider">
