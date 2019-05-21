@@ -1,0 +1,133 @@
+<html>
+    <head>
+        <title>5 : Слайд-шоу</title>
+        <meta charset="utf=8">
+    </head>
+    <style>
+
+html {
+    font-family: Calibri;
+}
+
+#img1 {
+  background: url('images/img1.jpg');
+}
+
+#img2 {
+  background: url('images/img2.jpg');
+}
+
+#img3 {
+  background: url('images/img3.jpg');
+}
+
+#img4 {
+  background: url('images/img4.jpg');
+}
+
+#img5 {
+  background: url('images/img5.jpg');
+}
+
+#img1, #img2, #img3, #img4, #img5 {
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  height: 400px;
+  width: 980px;
+}
+
+.hidden-img {
+  opacity: 0;
+}
+    </style>
+    <body>
+            Высота: <input type="number" id="himg" value="400">
+            Ширина: <input type="number" id="wimg" value="980">
+            <button id="prev-slide">&lt;</button>
+            <button id="next-slide">&gt;</button>
+            Скорость смены: <input value="4000" type="number" id="cspeed" placeholder="Скорость смены" min="1" max="10000">
+            <div class="slider">
+                    <div class="content">
+                      
+                      <div id="img1" class="hidden-img"></div>
+                      <div id="img2" class="hidden-img"></div>
+                      <div id="img3" class="hidden-img"></div>
+                      <div id="img4" class="hidden-img"></div>
+                      <div id="img5" class="hidden-img"></div>
+                      
+                    </div>
+                  </div>
+    </body>
+    <script>
+
+        let himg = document.getElementById('himg');
+        let wimg = document.getElementById('wimg');
+
+        himg.oninput = function() {
+            let h = Number(himg.value);
+            for (var i = 0; i < 5; i++)
+                images[i].style.height = h;
+        }
+
+        wimg.oninput = function() {
+            let w = Number(wimg.value);
+            for (var i = 0; i < 5; i++)
+                images[i].style.width = w;
+        }
+
+        let imageNumber = 0;
+
+        let images = [
+            document.getElementById('img1'),
+            document.getElementById('img2'),
+            document.getElementById('img3'),
+            document.getElementById('img4'),
+            document.getElementById('img5')
+        ];
+
+        let cspeedNumber = 4000;
+
+        window.onload = async function() {
+            while (true) {
+                changeSlide(true);
+                await sleep(cspeedNumber);
+            }
+        }
+
+        async function changeSlide(isNext) {
+            images[imageNumber].style.opacity = '0';
+            if (isNext) {
+                if (imageNumber == 4)
+                    imageNumber = 0;
+                else imageNumber++;
+            } else {
+                if (imageNumber == 0)
+                    imageNumber = 4;
+                else imageNumber--;
+            }
+
+            images[imageNumber].style.opacity = '1';
+        }
+
+        function sleep(ms) {
+            return new Promise(resolve => setTimeout(resolve, ms));
+        }
+
+        document.getElementById('prev-slide').onclick = function() {
+            changeSlide(false);
+        }
+
+        document.getElementById('next-slide').onclick = function() {
+            changeSlide(true);
+        }
+
+        let cspeed = document.getElementById('cspeed');
+
+        cspeed.oninput = function() {
+            cspeedNumber = Number(cspeed.value);
+        }
+
+        cspeedNumber
+    </script>
+</html>

@@ -1,0 +1,411 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>3 : Калькулятор</title>
+    </head>
+
+    <style>
+        html {
+            font-family: Calibri;
+        }
+
+        ::selection {
+            background: #00000000;
+        }
+        ::-moz-selection {
+            background: #00000000;
+        }
+
+        .container {
+            position: relative;
+            left: 50%;
+            top: 50%;
+            width: fit-content;
+            height: fit-content;
+            transform: translate(-50%, -50%);
+        }
+
+        .buttons {
+            display: grid;
+            grid-template-columns: 80px 80px 80px;
+            grid-gap: 8px;
+        }
+
+        .buttons div {
+            color: white;
+            background: #1E88E5;
+            border-radius: 2px;
+            font-size: 1.3rem;
+            padding: 8px;
+            text-align: center;
+            cursor: pointer;
+            -webkit-box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+            box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+            transition: .3s box-shadow;
+            transition: .3s background;
+            -webkit-transition: .3s -webkit-box-shadow;
+            -webkit-transition: .1s background;
+        }
+
+        .buttons div:hover {
+            -webkit-box-shadow: 0 8px 17px 2px rgba(0,0,0,0.14), 0 3px 14px 2px rgba(0,0,0,0.12), 0 5px 5px -3px rgba(0,0,0,0.2);
+            box-shadow: 0 8px 17px 2px rgba(0,0,0,0.14), 0 3px 14px 2px rgba(0,0,0,0.12), 0 5px 5px -3px rgba(0,0,0,0.2);
+        }
+
+        .buttons div:active {
+            -webkit-box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+            box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+            background: #1565C0;
+        }
+
+        .buttons .disabled {
+            background: gray;
+        }
+
+        .buttons .disabled:hover {
+            -webkit-box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+            box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+        }
+
+        .buttons .disabled:active {
+            background: gray;
+        }
+
+        #result {
+            width: 260px;
+            height: 70px;
+            line-height: 50px;
+            font-size: 1.5rem;
+            text-align: right;
+            overflow-x: scroll;
+        }
+
+        .buttons .operation {
+            background: #FF9800;
+        }
+
+        .buttons .operation:active {
+            background: #EF6C00;
+        }
+
+        .buttons #getres {
+            background: #f44336;
+        }
+
+        .buttons #getres {
+            background: #c62828;
+        }
+
+    </style>
+
+    <body>
+        <div class="container">
+            <div id="result"></div>
+            <div class="buttons">
+                <div id="getres">=</div>
+                <div class="disabled"></div>
+                <div class="operation" id="o1">sqrt</div>
+                <div class="operation" id="o2">^</div>
+                <div class="operation" id="o3">%</div>
+                <div class="operation" id="o4">+</div>
+                <div class="operation" id="o5">-</div>
+                <div class="operation" id="o6">*</div>
+                <div class="operation" id="o7">/</div>
+                <div id="b7">7</div>
+                <div id="b8">8</div>
+                <div id="b9">9</div>
+                <div id="b4">4</div>
+                <div id="b5">5</div>
+                <div id="b6">6</div>
+                <div id="b1">1</div>
+                <div id="b2">2</div>
+                <div id="b3">3</div>
+                <div class="disabled"></div>
+                <div id="b0">0</div>
+                <div class="disabled"></div>
+            </div>
+        </div>
+    </body>
+
+    <script>
+        let result = document.getElementById('result');
+        let getres = document.getElementById('getres');
+
+        let a = 0, b = 0;
+        var selectedOperation = 1000;
+        let firstSelected = false;
+        let secondSelected = false;
+        let wasRes = false;
+        let res;
+        let str = '';
+
+        function updateResult() {
+            result.innerHTML = String(res);
+            selectedOperation = 1000;
+            firstSelected = false;
+            secondSelected = false;
+            a = 0;
+            b = 0;
+            str = '';
+            wasRes = true;
+        }
+
+        document.getElementById('b0').onclick = function() {
+            if (!firstSelected) {
+                a = a * 10 + 0;
+            }
+            else if (!secondSelected) {
+                b = b * 10 + 0;
+            }
+            else {
+                a = 0;
+            }
+            if (wasRes) {
+                result.innerHTML = '';
+                wasRes = false;
+            }
+            result.innerHTML = result.innerHTML + '0';
+        }
+        document.getElementById('b1').onclick = function() {
+            if (!firstSelected) {
+                a = a * 10 + 1;
+            }
+            else if (!secondSelected) {
+                b = b * 10 + 1;
+            }
+            else {
+                a = 1;
+            }
+            if (wasRes) {
+                result.innerHTML = '';
+                wasRes = false;
+            }
+            result.innerHTML = result.innerHTML + '1';
+        }
+        document.getElementById('b2').onclick = function() {
+            if (!firstSelected) {
+                a = a * 10 + 2;
+            }
+            else if (!secondSelected) {
+                b = b * 10 + 2;
+            }
+            else {
+                a = 2;
+            }
+            if (wasRes) {
+                result.innerHTML = '';
+                wasRes = false;
+            }
+            result.innerHTML = result.innerHTML + '2';
+        }
+        document.getElementById('b3').onclick = function() {
+            if (!firstSelected) {
+                a = a * 10 + 3;
+            }
+            else if (!secondSelected) {
+                b = b * 10 + 3;
+            }
+            else {
+                a = 3;
+            }
+            if (wasRes) {
+                result.innerHTML = '';
+                wasRes = false;
+            }
+            result.innerHTML = result.innerHTML + '3';
+        }
+        document.getElementById('b4').onclick = function() {
+            if (!firstSelected) {
+                a = a * 10 + 4;
+            }
+            else if (!secondSelected) {
+                b = b * 10 + 4;
+            }
+            else {
+                a = 4;
+            }
+            if (wasRes) {
+                result.innerHTML = '';
+                wasRes = false;
+            }
+            result.innerHTML = result.innerHTML + '4';
+        }
+        document.getElementById('b5').onclick = function() {
+            if (!firstSelected) {
+                a = a * 10 + 5;
+            }
+            else if (!secondSelected) {
+                b = b * 10 + 5;
+            }
+            else {
+                a = 5;
+            }
+            if (wasRes) {
+                result.innerHTML = '';
+                wasRes = false;
+            }
+            result.innerHTML = result.innerHTML + '5';
+        }
+        document.getElementById('b6').onclick = function() {
+            if (!firstSelected) {
+                a = a * 10 + 6;
+            }
+            else if (!secondSelected) {
+                b = b * 10 + 6;
+            }
+            else {
+                a = 6;
+            }
+            if (wasRes) {
+                result.innerHTML = '';
+                wasRes = false;
+            }
+            result.innerHTML = result.innerHTML + '6';
+        }
+        document.getElementById('b7').onclick = function() {
+            if (!firstSelected) {
+                a = a * 10 + 7;
+            }
+            else if (!secondSelected) {
+                b = b * 10 + 7;
+            }
+            else {
+                a = 7;
+            }
+            if (wasRes) {
+                result.innerHTML = '';
+                wasRes = false;
+            }
+            result.innerHTML = result.innerHTML + '7';
+        }
+        document.getElementById('b8').onclick = function() {
+            if (!firstSelected) {
+                a = a * 10 + 8;
+            }
+            else if (!secondSelected) {
+                b = b * 10 + 8;
+            }
+            else {
+                a = 8;
+            }
+            if (wasRes) {
+                result.innerHTML = '';
+                wasRes = false;
+            }
+            result.innerHTML = result.innerHTML + '8';
+        }
+        document.getElementById('b9').onclick = function() {
+            if (!firstSelected) {
+                a = a * 10 + 9;
+            }
+            else if (!secondSelected) {
+                b = b * 10 + 9;
+            }
+            else {
+                a = 9;
+            }
+            if (wasRes) {
+                result.innerHTML = '';
+                wasRes = false;
+            }
+            result.innerHTML = result.innerHTML + '9';
+        }
+
+        document.getElementById('o1').onclick = function() {
+            selectedOperation = 1;
+            firstSelected = true;
+            if (wasRes) {
+                result.innerHTML = '';
+                wasRes = false;
+            }
+            findResult();
+        }
+        document.getElementById('o2').onclick = function() {
+            selectedOperation = 2;
+            firstSelected = true;
+            if (wasRes) {
+                result.innerHTML = '';
+                wasRes = false;
+            }
+            result.innerHTML = result.innerHTML + ' ^ ';
+        }
+        document.getElementById('o3').onclick = function() {
+            selectedOperation = 3;
+            firstSelected = true;
+            if (wasRes) {
+                result.innerHTML = '';
+                wasRes = false;
+            }
+            result.innerHTML = result.innerHTML + ' % ';
+        }
+        document.getElementById('o4').onclick = function() {
+            selectedOperation = 4;
+            firstSelected = true;
+            if (wasRes) {
+                result.innerHTML = '';
+                wasRes = false;
+            }
+            result.innerHTML = result.innerHTML + ' + ';
+        }
+        document.getElementById('o5').onclick = function() {
+            selectedOperation = 5;
+            firstSelected = true;
+            if (wasRes) {
+                result.innerHTML = '';
+                wasRes = false;
+            }
+            result.innerHTML = result.innerHTML + ' - ';
+        }
+        document.getElementById('o6').onclick = function() {
+            selectedOperation = 6;
+            firstSelected = true;
+            if (wasRes) {
+                result.innerHTML = '';
+                wasRes = false;
+            }
+            result.innerHTML = result.innerHTML + ' * ';
+        }
+        document.getElementById('o7').onclick = function() {
+            selectedOperation = 7;
+            firstSelected = true;
+            if (wasRes) {
+                result.innerHTML = '';
+                wasRes = false;
+            }
+            result.innerHTML = result.innerHTML + ' / ';
+        }
+
+        getres.onclick = findResult;
+        function findResult() {
+            if (selectedOperation == 1000) {
+                alert('You have not selected an operation');
+            }
+            else {
+                if (selectedOperation == 1) {
+                    res = Math.sqrt(a);
+                }
+                else if (selectedOperation == 2) {
+                    res = a ^ b;
+                }
+                else if (selectedOperation == 3) {
+                    res = a % b;
+                }
+                else if (selectedOperation == 4) {
+                    res = a + b;
+                }
+                else if (selectedOperation == 5) {
+                    res = a - b;
+                }
+                else if (selectedOperation == 6) {
+                    res = a * b;
+                }
+                else if (selectedOperation == 7) {
+                    res = a / b;
+                }
+            }
+
+            updateResult();
+        }
+    </script>
+
+</html>
